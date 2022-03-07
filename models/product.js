@@ -4,24 +4,19 @@ const mongoose = require('mongoose');
 const TaskSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'must provide a name'],
+        required: [true, 'name must be provided'],
         trim: true,
         maxLength: [20, 'Name can not be more than 20 characters'],
         minlength: [3, 'Name can not be less than 3 characters']
     },
     recipe: {
         type: String,
-        required: [true, 'Please provide content for your task'],
         trim: true,
-        maxLength: [240, 'Content must be max 240 characters long']
+        maxLength: [540, 'Content must be max 240 characters long']
     },
-    completed: {
-        type: Boolean,
-        default: false
-    },
-    user: {
-        type: mongoose.Types.ObjectId,
-        ref: 'User',
+    ingredients: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Merchandise',
         required: [true, 'An user must be related to the task']
     } 
 }, {timestamps: true});
