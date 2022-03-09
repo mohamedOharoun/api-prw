@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-//Modelado de las notas
+//Modelado de los pedidos
 const OrderSchema = new mongoose.Schema({
     name: {
         type: String,

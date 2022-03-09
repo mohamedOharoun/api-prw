@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-//Modelado de las notas
+//Modelado de los productos
 const ProductSchema = new mongoose.Schema({
     name: {
         type: String,

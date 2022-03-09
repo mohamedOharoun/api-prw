@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-//Modelado de las notas
+//Modelado de las materias primas
 const MerchandiseSchema = new mongoose.Schema({
     name: {
         type: String,
